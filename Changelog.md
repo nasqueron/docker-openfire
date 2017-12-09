@@ -1,7 +1,7 @@
 # Changelog
 
-**4.2.0_beta-openjdk**
-- openfire: upgrade to 4.2.0_beta
+**4.2.1-openjdk**
+- openfire: upgrade to 4.2.1
 - openjdk: upgrade to 8u151
 
 **4.1.6-openjdk**

@@ -1,7 +1,7 @@
 FROM gizmotronic/openjdk:8u151
 MAINTAINER gizmotronic@gmail.com
 
-ENV OPENFIRE_VERSION=4.2.0.beta \
+ENV OPENFIRE_VERSION=4.2.1 \
     OPENFIRE_USER=openfire \
     OPENFIRE_DATA_DIR=/var/lib/openfire \
     OPENFIRE_LOG_DIR=/var/log/openfire
