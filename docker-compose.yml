@@ -1,12 +1,12 @@
 version: '2'
 services:
   openfire:
-    image: nasqueron/openfire:4.7.4
+    image: openfire:${OPENFIRE_VERSION}
     ports:
       - "9090:9090/tcp"
       - "9091:9091/tcp"
       - "5222:5222/tcp"
       - "7777:7777/tcp"
     volumes:
-      - /srv/docker/openfire/data:/var/lib/openfire
-      - /srv/docker/openfire/logs:/var/log/openfire
+      - ./config/docker/openfire/data:/var/lib/openfire
+      - ./config/docker/openfire/logs:/var/log/openfire

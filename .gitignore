@@ -1,1 +1,3 @@
 *.deb
+/config/openfire/data/*
+/config/openfire/logs/*
