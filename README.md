@@ -1,4 +1,4 @@
-# nasqueron/openfire:4.8.0
+# nasqueron/openfire:4.8.1
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
@@ -48,7 +48,7 @@ If the above recommendations do not help then [report your issue](../../issues/n
 Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/nasqueron/openfire) and is the recommended method of installation.
 
 ```bash
-docker pull nasqueron/openfire:4.8.0
+docker pull nasqueron/openfire:4.8.1
 ```
 
 Alternatively you can build the image yourself.
@@ -65,7 +65,7 @@ Start Openfire using:
 docker run --name openfire -d --restart=always \
   --publish 9090:9090 --publish 5222:5222 --publish 7777:7777 \
   --volume /srv/docker/openfire:/var/lib/openfire \
-  nasqueron/openfire:4.8.0
+  nasqueron/openfire:4.8.1
 ```
 
 *Alternatively, you can use the sample [docker-compose.yml](docker-compose.yml) file to start the container using [Docker Compose](https://docs.docker.com/compose/)*
@@ -92,7 +92,7 @@ You may append options to the startup command to configure the JVM:
 ```bash
 docker run -name openfire -d \
   [DOCKER_OPTIONS] \
-  nasqueron/openfire:4.8.0 \
+  nasqueron/openfire:4.8.1 \
   -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode
 ```
 
@@ -113,7 +113,7 @@ To upgrade to newer releases:
   1. Download the updated Docker image:
 
   ```bash
-  docker pull nasqueron/openfire:4.8.0
+  docker pull nasqueron/openfire:4.8.1
   ```
 
   2. Stop the currently running image:
@@ -133,7 +133,7 @@ To upgrade to newer releases:
   ```bash
   docker run -name openfire -d \
     [OPTIONS] \
-    nasqueron/openfire:4.8.0
+    nasqueron/openfire:4.8.1
   ```
 
 ## Shell Access
