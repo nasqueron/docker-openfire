@@ -1,7 +1,7 @@
 version: '2'
 services:
   openfire:
-    image: nasqueron/openfire:4.8.1
+    image: nasqueron/openfire:4.8.3
     ports:
       - "9090:9090/tcp"
       - "9091:9091/tcp"
