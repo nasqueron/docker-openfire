@@ -5,14 +5,17 @@ ENV OPENFIRE_VERSION=4.8.3 \
     OPENFIRE_DATA_DIR=/var/lib/openfire \
     OPENFIRE_LOG_DIR=/var/log/openfire
 
+COPY fake-java.equivs /tmp/fake-java.equivs
+
 RUN apt-get update \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y sudo wget fontconfig libfreetype6 \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y sudo equivs wget fontconfig libfreetype6 \
+ && cd /tmp && equivs-build /tmp/fake-java.equivs && dpkg -i /tmp/java17-runtime_17_all.deb \
  && echo "Downloading openfire_${OPENFIRE_VERSION}_all.deb ..." \
  && wget --no-verbose "http://download.igniterealtime.org/openfire/openfire_${OPENFIRE_VERSION}_all.deb" -O /tmp/openfire_${OPENFIRE_VERSION}_all.deb \
- && dpkg -i --force-depends /tmp/openfire_${OPENFIRE_VERSION}_all.deb \
+ && dpkg -i /tmp/openfire_${OPENFIRE_VERSION}_all.deb \
  && mv /var/lib/openfire/plugins/admin /usr/share/openfire/plugin-admin \
  && ln -s /usr/local/openjdk-17/bin/java /usr/bin/java \
- && rm -rf /tmp/openfire_${OPENFIRE_VERSION}_all.deb \
+ && rm -rf /tmp/*.deb /tmp/*.equivs \
  && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /sbin/entrypoint.sh

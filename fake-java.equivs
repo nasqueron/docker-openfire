@@ -1,0 +1,5 @@
+Package: java17-runtime
+Version: 17
+Architecture: all
+Description: dummy java17-runtime package
+ A dummy package to avoid dpkg dependency issues.
