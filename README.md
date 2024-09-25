@@ -2,31 +2,32 @@
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
-  - [Issues](#issues)
-  - [Announcements](../../issues/1)
+  - [Other issues](#other-issues)
 - [Getting started](#getting-started)
   - [Installation](#installation)
   - [Quickstart](#quickstart)
   - [Persistence](#persistence)
+  - [Java VM options](#java-vm-options)
   - [Logs](#logs)
+- [Maintenance](#maintenance)
+  - [Upgrading](#upgrading)
+  - [Shell Access](#shell-access)
 - [References](#references)
 
 # Introduction
-
-This image is a fork of gizmotronic/openfire to keep an up-to-date version.
 
 `Dockerfile` to create a [Docker](https://www.docker.com/) container image for [Openfire](http://www.igniterealtime.org/projects/openfire/).
 
 Openfire is a real time collaboration (RTC) server licensed under the Open Source Apache License. It uses the only widely adopted open protocol for instant messaging, XMPP (also called Jabber). Openfire is incredibly easy to setup and administer, but offers rock-solid security and performance.
 
-This project is almost entirely identical to [sameersbn/openfire](/sameersbn/openfire).
+This image is a fork of [gizmotronic/openfire](https://github.com/gizmotronic/docker-openfire), a fork of [sameersbn/openfire](https://github.com/sameersbn/docker-openfire) itself, to keep an up-to-date version.
 
 ## Contributing
 
 If you find this image useful here's how you can help:
 
 - Send a pull request with your awesome features and bug fixes
-- Help users resolve their [issues](../../issues?q=is%3Aopen+is%3Aissue).
+- Help users resolve their [issues](https://github.com/nasqueron/docker-openfire/issues).
 - Support the development of this image with a [donation](http://www.damagehead.com/donate/)
 
 ## Other issues
@@ -146,5 +147,5 @@ docker exec -it openfire bash
 
 # References
 
-  * http://www.igniterealtime.org/projects/openfire/
+  * https://www.igniterealtime.org/projects/openfire/
   * https://library.linode.com/communications/xmpp/openfire/ubuntu-12.04-precise-pangolin
