@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-slim-bullseye
 
-ENV OPENFIRE_VERSION=4.9.0 \
+ENV OPENFIRE_VERSION=4.9.2 \
     OPENFIRE_USER=openfire \
     OPENFIRE_DATA_DIR=/var/lib/openfire \
     OPENFIRE_LOG_DIR=/var/log/openfire
